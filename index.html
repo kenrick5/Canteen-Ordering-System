@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Canteen System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>School Canteen Ordering System</h1>
+        
+        <!-- Login/Register Section -->
+        <div id="login-register">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label>Email:</label>
+                <input type="email" id="login-email" required>
+                <label>Password:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Login</button>
+            </form>
+            <h2>Register</h2>
+            <form id="register-form">
+                <label>Name:</label>
+                <input type="text" id="register-name" required>
+                <label>Email:</label>
+                <input type="email" id="register-email" required>
+                <label>Password:</label>
+                <input type="password" id="register-password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- User Dashboard -->
+        <div id="dashboard" style="display: none;">
+            <h2>Welcome, <span id="user-name"></span></h2>
+            <button id="logout-button">Logout</button>
+
+            <h3>Menu</h3>
+            <div id="menu"></div>
+
+            <h3>Your Orders</h3>
+            <ul id="order-list"></ul>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div id="admin-dashboard" style="display: none;">
+            <h2>Admin Dashboard</h2>
+            <h3>Manage Menu</h3>
+            <form id="menu-form">
+                <label>Name:</label>
+                <input type="text" id="menu-name" required>
+                <label>Category:</label>
+                <select id="menu-category">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="snacks">Snacks</option>
+                </select>
+                <label>Price:</label>
+                <input type="number" id="menu-price" step="0.01" required>
+                <label>Description:</label>
+                <textarea id="menu-description"></textarea>
+                <button type="submit">Add Menu Item</button>
+            </form>
+            <h3>Menu Items</h3>
+            <ul id="menu-list"></ul>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
